@@ -25,7 +25,6 @@ export const theme = {
   dangerColor: '#f44336',
 
   primaryColor: mainBrandColor,
-  borderColor: '#e0e6ef',
   backgroundColor: '#FFFFFF',
   backgroundInputColor: lightShades,
   backgroundInputColorDark: darkShades,
@@ -55,9 +54,7 @@ const GlobalStyle = createGlobalStyle`
   .title {
     font-family: ${theme.primaryFontFamily};
   }
-  .button {
-    font-family: ${theme.primaryFontFamily};
-  }
+
   p {
     line-height: 1.5rem;
   }
@@ -67,33 +64,8 @@ const GlobalStyle = createGlobalStyle`
   .subtitle {
     color: ${lighten(0.06, theme.textColor)} !important;
   }
-  .button.is-primary {
-    background-color: ${theme.mainBrandColor};
-    transition: background-color 0.2s ease;
-    :hover {
-      background-color: ${darken(0.06, theme.mainBrandColor)};
-    }
-  }
-  .button.is-secondary {
-    background-color: ${theme.lightAccent};
-    transition: background-color 0.2s ease;
-    color: #ffffff;
-    :hover {
-      background-color: ${darken(0.06, theme.lightAccent)};
-    }
-  }
-  .button.is-link {
-    background-color: ${theme.darkAccent};
-    transition: background-color 0.2s ease;
-    :hover {
-      background-color: ${darken(0.06, theme.darkAccent)};
-    }
-  }
-  .button, .input, .card {
+ .input, .card {
     box-shadow: ${theme.boxShadow};
-  }
-  .has-text-warning {
-    color: ${theme.lightAccent} !important;
   }
 `;
 

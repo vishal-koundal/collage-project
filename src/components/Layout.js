@@ -6,9 +6,7 @@ import GlobalStyle, { theme } from '../utils/theme';
 import config from '../utils/config';
 import Header from './Header';
 
-const Container = styled.div`
-  min-height: 70vh;
-`;
+const Container = styled.div``;
 
 const IndexLayout = ({ children, hideHeader }) => (
   <ThemeProvider theme={theme}>

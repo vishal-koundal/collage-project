@@ -17,14 +17,6 @@ export default class HTML extends React.Component {
 
           {/* Add custom css or scripts here */}
           <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"
-          />
-          <script
-            defer
-            src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
-          />
-          <link
             href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap"
             rel="stylesheet"
           />
@@ -34,8 +26,11 @@ export default class HTML extends React.Component {
           />
 
           <script src="/js/scripts.js" />
+          <script
+            defer
+            src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+          />
           {/* Add custom css or scripts here */}
-
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>
