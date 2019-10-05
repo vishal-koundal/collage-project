@@ -4,6 +4,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
+const Navbar = styled.nav`
+  background: ${props => props.theme.primaryColor};
+`;
 const NavItems = [
   { id: 1, name: 'home', url: '/' },
   { id: 2, name: 'about', url: '/' },
@@ -32,8 +35,8 @@ export default class Header extends React.Component {
     const { isActive } = this.state;
 
     return (
-      <nav className="flex items-center justify-between flex-wrap fixed inset-x-0 py-4 px-12">
-        <div className="flex items-center flex-shrink-0 text-white mr-6">
+      <Navbar className="flex items-center justify-between flex-wrap fixed inset-x-0 py-4 px-12">
+        <div className="flex items-center flex-shrink-0 mr-6">
           <img
             src="https://colorlib.com/preview/theme/coffee/img/logo.png"
             alt="cafe-logo"
@@ -55,31 +58,25 @@ export default class Header extends React.Component {
             {NavItems.map(item => (
               <Link
                 to={item.url}
-                className="block mt-4 lg:inline-block lg:mt-0 text-white text-sm hover:text-white mr-6"
+                className="block mt-4 lg:inline-block lg:mt-0 text-sm mr-6"
                 key={item.id}>
                 {item.name}
               </Link>
             ))}
           </div>
           <div>
-            <Link
-              href="/"
-              className="inline-block px-2 py-2 text-white hover:bg-transparent mt-4 lg:mt-0">
+            <Link to="/" className="inline-block px-2 py-2 mt-4 lg:mt-0">
               <i className="fab fa-instagram text-xl" />
             </Link>
-            <Link
-              href="/"
-              className="inline-block px-2 py-2 text-white hover:bg-transparent mt-4 lg:mt-0">
+            <Link to="/" className="inline-block px-2 py-2 mt-4 lg:mt-0">
               <i className="fab fa-facebook-f text-xl" />
             </Link>
-            <Link
-              href="/"
-              className="inline-block px-2 py-2 text-white hover:bg-transparent mt-4 lg:mt-0">
+            <Link to="/" className="inline-block px-2 py-2 mt-4 lg:mt-0">
               <i className="fab fa-twitter text-xl" />
             </Link>
           </div>
         </div>
-      </nav>
+      </Navbar>
     );
   }
 }

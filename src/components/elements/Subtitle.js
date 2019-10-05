@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.h2`
-  color: #ffffff;
+  color: ${props =>
+    props.white ? props.theme.colorWhite : props.theme.darkBlack};
 `;
 
 const Subtitle = ({ children, ...props }) => (

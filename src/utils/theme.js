@@ -24,21 +24,14 @@ export const theme = {
   darkShades,
   dangerColor: '#f44336',
 
-  primaryColor: mainBrandColor,
-  backgroundColor: '#FFFFFF',
-  backgroundInputColor: lightShades,
-  backgroundInputColorDark: darkShades,
-  fontSize: 16,
-  fontSizeSmall: 14,
-  fontSizeExtraSmall: 12,
-  fontSizeMedium: 18,
-  fontSizeLarge: 22,
-  textColor: darkShades, // '#0A0B11',
-  textColorInverse: lightShades,
-  textColorLite: '#8B8989',
-  menuTintColor: darkAccent,
-  primaryFontFamily: "'Open Sans', sans-serif",
-  secondaryFontFamily: "'Open Sans', sans-serif",
+  primaryColor: '#351b14',
+  colorWhite: '#ffffff',
+  darkBlack: '#222222',
+  lighterBlack: '#000',
+  textGray: '#777777',
+  // backgroundInputColor: lightShades,
+  // backgroundInputColorDark: darkShades,
+  // textColor: darkShades, // '#0A0B11',
   boxShadow: 'rgba(0,0,0,0.08) 0px 7px 18px',
 };
 
@@ -46,26 +39,16 @@ const GlobalStyle = createGlobalStyle`
   ${reset};
 
   body {
-    font-family: ${theme.secondaryFontFamily};
-    color: ${theme.textColor};
-    letter-spacing: 0.03rem !important;
-    font-size: 17px;
-  }
-  .title {
-    font-family: ${theme.primaryFontFamily};
-  }
-
-  p {
-    line-height: 1.5rem;
-  }
-  p, .title, .box {
-    color: ${theme.textColor} !important;
-  }
-  .subtitle {
-    color: ${lighten(0.06, theme.textColor)} !important;
+    font-family: sans-serif;
   }
  .input, .card {
     box-shadow: ${theme.boxShadow};
+  }
+  i {
+    color: ${theme.colorWhite}!important;
+  }
+  a {
+    color: ${theme.colorWhite}!important;
   }
 `;
 
