@@ -1,5 +1,4 @@
-/* eslint global-require: 0 */
-
+/* eslint-disable react/button-has-type */
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
@@ -25,7 +24,6 @@ export default class Header extends React.Component {
 
   handleMobileMenu() {
     const { isActive } = this.state;
-
     this.setState({
       isActive: !isActive,
     });
@@ -33,7 +31,6 @@ export default class Header extends React.Component {
 
   render() {
     const { isActive } = this.state;
-
     return (
       <Navbar className="flex items-center justify-between flex-wrap fixed inset-x-0 py-4 px-12">
         <div className="flex items-center flex-shrink-0 mr-6">
@@ -43,17 +40,34 @@ export default class Header extends React.Component {
           />
         </div>
         <div className="block lg:hidden">
-          <button className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
-            <svg
-              className="fill-current h-3 w-3"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-              <title>Menu</title>
-              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-            </svg>
+          <button
+            className="flex items-center px-3 py-2 border rounded text-white border-teal-400 hover:text-white hover:border-white"
+            onClick={() => this.handleMobileMenu()}>
+            {isActive ? (
+              <svg
+                className="fill-current h-3 w-3"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20">
+                <title>Menu</title>
+                <path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z" />
+              </svg>
+            ) : (
+              <svg
+                className="fill-current h-3 w-3"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <title>Menu</title>
+                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+              </svg>
+            )}
           </button>
         </div>
-        <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+        <div
+          className={
+            isActive
+              ? 'w-full block flex-grow lg:flex lg:items-center lg:w-auto'
+              : 'w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden'
+          }>
           <div className="text-sm text-center lg:flex-grow uppercase">
             {NavItems.map(item => (
               <Link
