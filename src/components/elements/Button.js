@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import styled from 'styled-components';
 
@@ -9,8 +10,7 @@ const Button = ({ children, ...props }) => {
   return (
     <Container
       type="submit"
-      className="bg-transparent hover:bg-transparent rounded"
-      // eslint-disable-next-line react/jsx-props-no-spreading
+      className="mt-4 bg-white hover:text-white border border-solid border-white hover:bg-transparent rounded-full px-10 py-3"
       {...props}>
       {children}
     </Container>

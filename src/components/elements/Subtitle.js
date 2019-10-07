@@ -1,9 +1,10 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.h2`
   color: ${props =>
-    props.white ? props.theme.colorWhite : props.theme.darkBlack};
+    props.white ? props.theme.colorWhite : props.theme.textGray};
 `;
 
 const Subtitle = ({ children, ...props }) => (
