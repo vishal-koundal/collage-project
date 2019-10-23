@@ -25,6 +25,7 @@ export const theme = {
   dangerColor: '#f44336',
 
   primaryColor: '#351b14',
+  secondaryColor: '#b68834',
   colorWhite: '#ffffff',
   darkBlack: '#222222',
   lighterBlack: '#000',
@@ -49,6 +50,12 @@ const GlobalStyle = createGlobalStyle`
   }
   a {
     color: ${theme.colorWhite}!important;
+  }
+  .text-yellow-900 {
+    color: ${theme.secondaryColor}!important;
+  }
+  .grey {
+    color: ${theme.textGray}!important;
   }
 `;
 

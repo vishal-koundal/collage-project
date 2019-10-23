@@ -4,9 +4,6 @@ module.exports = {
   important: true,
   theme: {
     extend: {},
-    container: {
-      center: true,
-    },
   },
   corePlugins: {
     fontFamily: false,

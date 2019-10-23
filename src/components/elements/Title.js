@@ -8,7 +8,7 @@ const Container = styled.h2`
 `;
 
 const Title = ({ children, ...props }) => (
-  <Container className="text-2xl leading-normal font-semibold" {...props}>
+  <Container className="text-4xl leading-tight font-semibold" {...props}>
     {children}
   </Container>
 );

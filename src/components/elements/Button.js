@@ -10,7 +10,7 @@ const Button = ({ children, ...props }) => {
   return (
     <Container
       type="submit"
-      className="mt-4 bg-white hover:text-white border border-solid border-white hover:bg-transparent rounded-full px-10 py-3"
+      className="mt-4 bg-white hover:text-white font-semibold border border-solid border-white hover:bg-transparent rounded-full px-10 py-3"
       {...props}>
       {children}
     </Container>
