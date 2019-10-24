@@ -45,6 +45,9 @@ const GlobalStyle = createGlobalStyle`
  .input, .card {
     box-shadow: ${theme.boxShadow};
   }
+  .card {
+    background-color: ${theme.colorWhite}!important;
+  }
   i {
     color: ${theme.colorWhite}!important;
   }
@@ -54,8 +57,14 @@ const GlobalStyle = createGlobalStyle`
   .text-yellow-900 {
     color: ${theme.secondaryColor}!important;
   }
+  .bg-yellow-900 {
+    background-color: ${theme.secondaryColor}!important;
+  }
   .grey {
     color: ${theme.textGray}!important;
+  }
+  .white {
+    color: ${theme.colorWhite}!important;
   }
 `;
 
