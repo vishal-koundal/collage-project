@@ -8,10 +8,10 @@ const Navbar = styled.nav`
 `;
 const NavItems = [
   { id: 1, name: 'home', url: '/' },
-  { id: 2, name: 'about', url: '/' },
-  { id: 3, name: 'coffee', url: '/' },
-  { id: 4, name: 'review', url: '/' },
-  { id: 5, name: 'blog', url: '/' },
+  { id: 2, name: 'about', url: '/about' },
+  { id: 3, name: 'review', url: '/' },
+  { id: 4, name: 'blog', url: '/news' },
+  { id: 5, name: 'contact', url: '/contact' },
 ];
 export default class Header extends React.Component {
   constructor(props) {

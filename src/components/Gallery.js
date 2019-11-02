@@ -26,9 +26,9 @@ const Products = () => (
             alt=""
           />
         </div>
-        <div className="flex-grow">
+        <div className="flex-grow-0 sm:flex-grow-1">
           <img
-            className="p-2"
+            className="p-2 sm:"
             src="https://colorlib.com/preview/theme/coffee/img/g3.jpg"
             alt=""
           />

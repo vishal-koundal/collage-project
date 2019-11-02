@@ -1,6 +1,16 @@
+// eslint-disable-next-line import/no-unresolved
 import React from 'react';
 import styled from 'styled-components';
+import CountUp from 'react-countup';
+
 import { MainContainer, Title, Subtitle } from './elements';
+
+const ProductItems = [
+  { id: 1, count: '2536', type: 'Happy Client' },
+  { id: 2, count: '7562', type: 'Total Projects' },
+  { id: 3, count: '2013', type: 'Cups Coffee' },
+  { id: 4, count: '10536', type: 'Total Submitted' },
+];
 
 const Container = styled.div``;
 
@@ -14,7 +24,7 @@ const Products = () => (
         </Subtitle>
       </div>
       <div className="flex flex-wrap py-10">
-        <div className="w-1/2">
+        <div className="w-full sm:w-1/2">
           <img
             src="https://colorlib.com/preview/theme/coffee/img/r1.png"
             alt=""
@@ -38,7 +48,7 @@ const Products = () => (
             speaker.
           </Subtitle>
         </div>
-        <div className="w-1/2">
+        <div className="w-full sm:w-1/2">
           <img
             src="https://colorlib.com/preview/theme/coffee/img/r2.png"
             alt=""
@@ -62,9 +72,21 @@ const Products = () => (
             speaker.
           </Subtitle>
         </div>
-        
       </div>
-        
+      <div className="block sm:flex justify-around mt-10 text-center sm:text-left">
+        {ProductItems.map(item => (
+          <div key={item.id} className="my-6">
+            <CountUp
+              start={0}
+              end={item.count}
+              duration={3}
+              delay={2}
+              className="text-6xl white font-thin"
+            />
+            <Subtitle className="text-base my-2 white">{item.type}</Subtitle>
+          </div>
+        ))}
+      </div>
     </MainContainer>
   </Container>
 );

@@ -6,7 +6,7 @@ const Container = styled.div`
   background: url(https://colorlib.com/preview/theme/coffee/img/menu-bg.jpg);
   background-size: cover;
 `;
-const NavItems = [
+const ProductItems = [
   { id: 1, name: 'Cappuccino', price: '$49' },
   { id: 2, name: 'Americano', price: '$47' },
   { id: 3, name: 'Espresso', price: '$45' },
@@ -27,8 +27,8 @@ const Products = () => (
           Who are in extremely love with eco friendly system.
         </Subtitle>
       </div>
-      <div className="p-4 flex flex-wrap justify-between">
-        {NavItems.map(item => (
+      <div className="p-4 flex flex-wrap justify-around">
+        {ProductItems.map(item => (
           <div
             key={item.id}
             className="my-4 mx-2 max-w-sm card rounded-lg overflow-hidden shadow-lg">
