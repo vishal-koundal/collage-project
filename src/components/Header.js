@@ -32,7 +32,7 @@ export default class Header extends React.Component {
   render() {
     const { isActive } = this.state;
     return (
-      <Navbar className="flex items-center justify-between flex-wrap fixed inset-x-0 py-4 px-12">
+      <Navbar className="flex items-center justify-between flex-wrap py-4 px-12">
         <div className="flex items-center flex-shrink-0 mr-6">
           <img
             src="https://colorlib.com/preview/theme/coffee/img/logo.png"

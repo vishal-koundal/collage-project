@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
-import dayjs from 'dayjs';
+
 import { Button, Subtitle, Heading } from './elements';
 
 const Container = styled.div`

@@ -14,7 +14,7 @@ const ProductItems = [
 
 const Container = styled.div``;
 
-const Products = () => (
+const Countup = () => (
   <Container className="bg-yellow-900">
     <MainContainer>
       <div className="text-center py-6">
@@ -91,4 +91,4 @@ const Products = () => (
   </Container>
 );
 
-export default Products;
+export default Countup;
