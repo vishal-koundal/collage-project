@@ -32,7 +32,7 @@ const Products = () => (
             src="https://colorlib.com/preview/theme/coffee/img/g3.jpg"
             alt=""
           />
-          <div className="flex flex-wrap">
+          <div className="flex flex-wrap justify-between">
             <img
               className="p-2"
               src="https://colorlib.com/preview/theme/coffee/img/g4.jpg"

@@ -23,8 +23,8 @@ const Countup = () => (
           Who are in extremely love with eco friendly system.
         </Subtitle>
       </div>
-      <div className="flex flex-wrap py-10">
-        <div className="w-full sm:w-1/2">
+      <div className="flex flex-wrap">
+        <div className="w-full sm:w-1/2 py-10">
           <img
             src="https://colorlib.com/preview/theme/coffee/img/r1.png"
             alt=""
@@ -48,7 +48,7 @@ const Countup = () => (
             speaker.
           </Subtitle>
         </div>
-        <div className="w-full sm:w-1/2">
+        <div className="w-full sm:w-1/2 py-10">
           <img
             src="https://colorlib.com/preview/theme/coffee/img/r2.png"
             alt=""

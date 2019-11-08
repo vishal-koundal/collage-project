@@ -6,12 +6,13 @@ import { Subtitle, MainContainer } from './elements';
 const Container = styled.div`
   background: url(https://colorlib.com/preview/theme/coffee/img/footer-bg.jpg);
   background-size: cover;
+  background-position: center;
 `;
 
 const Footer = () => (
-  <Container className="py-40">
+  <Container className="py-16">
     <MainContainer className="block sm:flex white py-40">
-     <div className="w-2/5 pr-12">
+      <div className="w-full sm:w-2/5 pr-12 pt-8">
         <Subtitle className="text-xl font-semibold font-hairline">
           About Us
         </Subtitle>
@@ -24,26 +25,31 @@ const Footer = () => (
           Colorlib
         </Subtitle>
       </div>
-      <div className="w-2/5 pr-12">
+      <div className="w-full sm:w-2/5 pr-12 pt-8">
         <Subtitle className="text-xl font-semibold white">Newsletter</Subtitle>
         <Subtitle className="font-hairline leading-tight pt-8">
           Stay update with our latest
         </Subtitle>
-        <form class="w-full max-w-sm mt-4">
-  <div class="flex">
-  <input class="w-full p-3" type="text" placeholder="Enter Email" aria-label="Full name"/>
-    <button class="flex-shrink-0 bg-yellow-900 p-3" type="button">
-      -->
-    </button>
-  </div>
-</form>
+        <form className="w-full max-w-sm mt-4">
+          <div className="flex">
+            <input
+              className="w-full p-3"
+              type="text"
+              placeholder="Enter Email"
+              aria-label="Full name"
+            />
+            <button className="flex-shrink-0 bg-yellow-900 p-3" type="button">
+              <i className="fas fa-long-arrow-alt-right" />
+            </button>
+          </div>
+        </form>
       </div>
-      <div className="w-1/5 pr-12">
+      <div className="w-full sm:w-1/5 pr-12 pt-8">
         <Subtitle className="text-xl font-semibold white">Follow Us</Subtitle>
         <Subtitle className="font-hairline leading-tight pt-8">
           Let us be social
         </Subtitle>
-        <div className="pt-6">
+        <div className="pt-6 flex">
           <Link to="/" className="inline-block px-2 py-2 mt-4 lg:mt-0">
             <i className="fab fa-instagram text-xl" />
           </Link>
