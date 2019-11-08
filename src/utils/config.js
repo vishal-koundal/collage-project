@@ -3,8 +3,7 @@ module.exports = {
 
   siteName: 'Cafe',
   author: 'Zeiq team',
-  description: 'A starting point using ReactJs, bundled with awesome GatsbyJs.',
-  siteUrl: 'http://kickoff-gatsbyjs.netlify.com',
+  siteUrl: 'https://cafecoffe.netlify.com/',
 
   telephone: '+1-123-123-123',
   email: 'john@doe.com',
