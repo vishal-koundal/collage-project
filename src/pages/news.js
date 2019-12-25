@@ -1,58 +1,30 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
 import styled from 'styled-components';
 
+import HomeAbout from '../components/HomeAbout';
 import Layout from '../components/Layout';
-import Seo from '../components/Seo';
-import NewsItem from '../components/NewsItem';
+import { Title, Subtitle, MainContainer } from '../components/elements';
+import Countup from '../components/Countup';
 
-const Container = styled.div`
-  margin-top: 4rem;
-  margin-bottom: 6rem;
+const Section = styled.div`
+  background: url(https://colorlib.com/preview/theme/coffee/img/menu-bg.jpg);
+  background-size: cover;
 `;
 
-const NewsUpdates = ({ data }) => {
-  const { edges: posts } = data.allMdx;
+const Review = () => (
+  <Layout>
+    <Section>
+      <MainContainer>
+        <div className="text-center py-6">
+          <Title>What kind of Coffee we serve for you</Title>
+          <Subtitle className="grey pt-2">
+            Who are in extremely love with eco friendly system.
+          </Subtitle>
+        </div>
+      </MainContainer>
+    </Section>
+  </Layout>
+);
 
-  return (
-    <Layout>
-      <Seo title="News & Updates" />
-      <section className="section">
-        <Container className="container">
-          <h2 className="title is-2 has-text-centered has-text-weight-bold">
-            News & Updates
-          </h2>
-          <div className="columns is-centered">
-            <div className="column is-four-fifths">
-              {posts.map(({ node: post }) => (
-                <NewsItem key={post.id} post={post} />
-              ))}
-            </div>
-          </div>
-        </Container>
-      </section>
-    </Layout>
-  );
-};
-
-export default NewsUpdates;
-
-export const pageQuery = graphql`
-  query newsIndex {
-    allMdx(sort: { fields: frontmatter___date, order: DESC }) {
-      edges {
-        node {
-          id
-          excerpt
-          frontmatter {
-            title
-            date
-            category
-          }
-          fields {
-            slug
-          }
-        }
-      }
-    }
-  }
-`;
+export default Review;

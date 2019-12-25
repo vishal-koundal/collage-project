@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+
 import { Subtitle, MainContainer } from './elements';
+import Social from '../components/Social';
 
 const Container = styled.div`
   background: url(https://colorlib.com/preview/theme/coffee/img/footer-bg.jpg);
@@ -50,15 +52,7 @@ const Footer = () => (
           Let us be social
         </Subtitle>
         <div className="pt-6 flex">
-          <Link to="/" className="inline-block px-2 py-2 mt-4 lg:mt-0">
-            <i className="fab fa-instagram text-xl" />
-          </Link>
-          <Link to="/" className="inline-block px-2 py-2 mt-4 lg:mt-0">
-            <i className="fab fa-facebook-f text-xl" />
-          </Link>
-          <Link to="/" className="inline-block px-2 py-2 mt-4 lg:mt-0">
-            <i className="fab fa-twitter text-xl" />
-          </Link>
+          <Social />
         </div>
       </div>
     </MainContainer>

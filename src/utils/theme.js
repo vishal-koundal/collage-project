@@ -42,11 +42,15 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: sans-serif;
   }
- .input, .card {
-    box-shadow: ${theme.boxShadow};
+  input {
+    border: 1px solid #b68834 !important;
+  }
+  textarea {
+    border: 1px solid #b68834 !important;
   }
   .card {
     background-color: ${theme.colorWhite}!important;
+    box-shadow: ${theme.boxShadow};
   }
   i {
     color: ${theme.colorWhite}!important;

@@ -5,11 +5,16 @@ import CountUp from 'react-countup';
 
 import { MainContainer, Title, Subtitle } from './elements';
 
-const ProductItems = [
+const CountupRow = [
   { id: 1, count: '2536', type: 'Happy Client' },
   { id: 2, count: '7562', type: 'Total Projects' },
   { id: 3, count: '2013', type: 'Cups Coffee' },
   { id: 4, count: '10536', type: 'Total Submitted' },
+];
+
+const CountupRowss = [
+  { id: 1, image: 'https://colorlib.com/preview/theme/coffee/img/r1.png' },
+  { id: 2, image: 'https://colorlib.com/preview/theme/coffee/img/r2.png' },
 ];
 
 const Container = styled.div``;
@@ -24,57 +29,32 @@ const Countup = () => (
         </Subtitle>
       </div>
       <div className="flex flex-wrap">
-        <div className="w-full sm:w-1/2 py-10">
-          <img
-            src="https://colorlib.com/preview/theme/coffee/img/r1.png"
-            alt=""
-          />
-          <div className="flex py-6">
-            <Subtitle className="white uppercase font-bold">
-              lorem ipusm
-            </Subtitle>
-            <div className="px-4">
-              <i className="fas fa-star mr-1 text-orange-400 text-sm" />
-              <i className="fas fa-star mr-1 text-orange-400 text-sm" />
-              <i className="fas fa-star mr-1 text-orange-400 text-sm" />
-              <i className="fas fa-star mr-1 white text-sm" />
-              <i className="fas fa-star mr-1 white text-sm" />
+        {CountupRowss.map(item => (
+          <div key={item.id} className="w-full sm:w-1/2 py-10">
+            <img src={item.image} alt="" />
+            <div className="flex py-6">
+              <Subtitle className="white uppercase font-bold">
+                lorem ipusm
+              </Subtitle>
+              <div className="px-4">
+                <i className="fas fa-star mr-1 text-orange-400 text-sm" />
+                <i className="fas fa-star mr-1 text-orange-400 text-sm" />
+                <i className="fas fa-star mr-1 text-orange-400 text-sm" />
+                <i className="fas fa-star mr-1 white text-sm" />
+                <i className="fas fa-star mr-1 white text-sm" />
+              </div>
             </div>
-          </div>
-          <Subtitle className="white leading-snug">
-            Accessories Here you can find the best computer accessory for your
-            laptop, monitor, printer, scanner, speaker. Here you can find the
-            best computer accessory for your laptop, monitor, printer, scanner,
-            speaker.
-          </Subtitle>
-        </div>
-        <div className="w-full sm:w-1/2 py-10">
-          <img
-            src="https://colorlib.com/preview/theme/coffee/img/r2.png"
-            alt=""
-          />
-          <div className="flex py-6">
-            <Subtitle className="white uppercase font-bold">
-              lorem ipusm
+            <Subtitle className="white leading-snug">
+              Accessories Here you can find the best computer accessory for your
+              laptop, monitor, printer, scanner, speaker. Here you can find the
+              best computer accessory for your laptop, monitor, printer,
+              scanner, speaker.
             </Subtitle>
-            <div className="px-4">
-              <i className="fas fa-star mr-1 text-orange-400 text-sm" />
-              <i className="fas fa-star mr-1 text-orange-400 text-sm" />
-              <i className="fas fa-star mr-1 text-orange-400 text-sm" />
-              <i className="fas fa-star mr-1 white text-sm" />
-              <i className="fas fa-star mr-1 white text-sm" />
-            </div>
           </div>
-          <Subtitle className="white leading-snug">
-            Accessories Here you can find the best computer accessory for your
-            laptop, monitor, printer, scanner, speaker. Here you can find the
-            best computer accessory for your laptop, monitor, printer, scanner,
-            speaker.
-          </Subtitle>
-        </div>
+        ))}
       </div>
       <div className="block sm:flex justify-around mt-10 text-center sm:text-left">
-        {ProductItems.map(item => (
+        {CountupRow.map(item => (
           <div key={item.id} className="my-6">
             <CountUp
               start={0}

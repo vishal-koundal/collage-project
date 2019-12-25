@@ -3,15 +3,17 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
+import Social from './Social';
+
 const Navbar = styled.nav`
   background: ${props => props.theme.primaryColor};
 `;
 const NavItems = [
   { id: 1, name: 'home', url: '/' },
-  { id: 2, name: 'about', url: '/about' },
-  { id: 3, name: 'review', url: '/' },
+  { id: 2, name: 'about', url: '/aboutpage' },
+  { id: 3, name: 'review', url: '/review' },
   { id: 4, name: 'blog', url: '/news' },
-  { id: 5, name: 'contact', url: '/contact' },
+  { id: 5, name: 'Get In Touch', url: '/contact' },
 ];
 export default class Header extends React.Component {
   constructor(props) {
@@ -79,15 +81,7 @@ export default class Header extends React.Component {
             ))}
           </div>
           <div>
-            <Link to="/" className="inline-block px-2 py-2 mt-4 lg:mt-0">
-              <i className="fab fa-instagram text-xl" />
-            </Link>
-            <Link to="/" className="inline-block px-2 py-2 mt-4 lg:mt-0">
-              <i className="fab fa-facebook-f text-xl" />
-            </Link>
-            <Link to="/" className="inline-block px-2 py-2 mt-4 lg:mt-0">
-              <i className="fab fa-twitter text-xl" />
-            </Link>
+            <Social />
           </div>
         </div>
       </Navbar>
