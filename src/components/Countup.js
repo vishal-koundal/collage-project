@@ -12,7 +12,7 @@ const CountupRow = [
   { id: 4, count: '10536', type: 'Total Submitted' },
 ];
 
-const CountupRowss = [
+const Review = [
   { id: 1, image: 'https://colorlib.com/preview/theme/coffee/img/r1.png' },
   { id: 2, image: 'https://colorlib.com/preview/theme/coffee/img/r2.png' },
 ];
@@ -29,7 +29,7 @@ const Countup = () => (
         </Subtitle>
       </div>
       <div className="flex flex-wrap">
-        {CountupRowss.map(item => (
+        {Review.map(item => (
           <div key={item.id} className="w-full sm:w-1/2 py-10">
             <img src={item.image} alt="" />
             <div className="flex py-6">

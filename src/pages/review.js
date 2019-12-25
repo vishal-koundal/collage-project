@@ -1,20 +1,17 @@
 /* eslint-disable import/no-unresolved */
 import React from 'react';
-import styled from 'styled-components';
 
 import Layout from '../components/Layout';
 import Countup from '../components/Countup';
 
-const Section = styled.div`
-  background: url(https://colorlib.com/preview/theme/coffee/img/menu-bg.jpg);
-  background-size: cover;
-`;
-
 const Review = () => (
   <Layout>
-    <Section className="pb-32">
-      <Countup />
-    </Section>
+    <div className="flex justify-center">
+      <div className="w-1/2 ">
+        <img className="image" src="/images/hangout.png" alt="contact us" />
+      </div>
+    </div>
+    <Countup />
   </Layout>
 );
 

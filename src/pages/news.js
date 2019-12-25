@@ -2,17 +2,19 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import HomeAbout from '../components/HomeAbout';
 import Layout from '../components/Layout';
 import { Title, Subtitle, MainContainer } from '../components/elements';
-import Countup from '../components/Countup';
 
 const Section = styled.div`
   background: url(https://colorlib.com/preview/theme/coffee/img/menu-bg.jpg);
   background-size: cover;
 `;
+const Blog = [
+  { id: 1, image: 'https://colorlib.com/preview/theme/coffee/img/b1.jpg' },
+  { id: 2, image: 'https://colorlib.com/preview/theme/coffee/img/b2.jpg' },
+];
 
-const Review = () => (
+const News = () => (
   <Layout>
     <Section>
       <MainContainer>
@@ -22,9 +24,26 @@ const Review = () => (
             Who are in extremely love with eco friendly system.
           </Subtitle>
         </div>
+        <div className="flex flex-wrap py-6">
+          {Blog.map(item => (
+            <div key={item.id} className="px-8 w-full sm:w-1/2">
+              <img className="py-8" src={item.image} alt="" />
+              <Subtitle className="font-semibold">
+                Portable latest Fashion for young women
+              </Subtitle>
+              <Subtitle className="pt-4 grey leading-normal">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore.
+              </Subtitle>
+              <Subtitle className="pt-4 text-yellow-900">
+                31st January, 2018
+              </Subtitle>
+            </div>
+          ))}
+        </div>
       </MainContainer>
     </Section>
   </Layout>
 );
 
-export default Review;
+export default News;
