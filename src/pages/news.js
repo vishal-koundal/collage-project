@@ -17,7 +17,7 @@ const Blog = [
 
 const News = () => (
   <Layout>
-  <Seo title="Blog" description="" />
+    <Seo title="Blog" description="" />
     <Section>
       <MainContainer>
         <div className="text-center py-6">

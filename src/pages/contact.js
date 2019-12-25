@@ -10,7 +10,7 @@ const Section = styled.div``;
 
 const Contact = () => (
   <Layout>
-  <Seo title="Contact" description="" />
+    <Seo title="Contact" description="" />
     <Section>
       <div className="flex justify-center">
         <div className="w-1/2 ">

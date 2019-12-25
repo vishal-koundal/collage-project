@@ -15,7 +15,7 @@ const Container = styled.div`
 
 const Aboutpage = () => (
   <Layout>
-  <Seo title="About" description="" />
+    <Seo title="About" description="" />
     <Section>
       <Container>
         <HomeAbout />

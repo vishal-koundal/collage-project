@@ -7,7 +7,7 @@ import Countup from '../components/Countup';
 
 const Review = () => (
   <Layout>
-  <Seo title="Review" description="" />
+    <Seo title="Review" description="" />
     <div className="flex justify-center">
       <div className="w-1/2 ">
         <img className="image" src="/images/hangout.png" alt="contact us" />
