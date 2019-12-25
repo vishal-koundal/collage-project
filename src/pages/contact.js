@@ -13,7 +13,7 @@ const Contact = () => (
     <Seo title="Contact" description="" />
     <Section>
       <div className="flex justify-center">
-        <div className="w-1/2 ">
+        <div className="w-full sm:w-1/2">
           <img className="image" src="/images/contact.png" alt="contact us" />
         </div>
       </div>
