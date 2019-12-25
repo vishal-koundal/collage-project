@@ -2,6 +2,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Seo from '../components/Seo';
 import HomeAbout from '../components/HomeAbout';
 import Layout from '../components/Layout';
 import { Title, Subtitle, MainContainer } from '../components/elements';
@@ -14,6 +15,7 @@ const Container = styled.div`
 
 const Aboutpage = () => (
   <Layout>
+  <Seo title="About" description="" />
     <Section>
       <Container>
         <HomeAbout />
@@ -28,7 +30,7 @@ const Aboutpage = () => (
             est. Saepe dolorum constituam ei vel. Te sit malorum ceteros
             repudiandae, ne tritani adipisci vis.
           </Subtitle>
-          <Title>Who we are</Title>
+          <Title>Why choose us?</Title>
           <Subtitle className="pt-4 grey leading-normal">
             Lorem ipsum dolor sit amet, quo meis audire placerat eu, te eos
             porro veniam. An everti maiorum detracto mea. Eu eos dicam

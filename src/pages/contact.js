@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import { Title, Subtitle, MainContainer } from '../components/elements';
 import Form from '../components/Form';
@@ -9,6 +10,7 @@ const Section = styled.div``;
 
 const Contact = () => (
   <Layout>
+  <Seo title="Contact" description="" />
     <Section>
       <div className="flex justify-center">
         <div className="w-1/2 ">

@@ -2,6 +2,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Seo from '../components/Seo';
 import Layout from '../components/Layout';
 import { Title, Subtitle, MainContainer } from '../components/elements';
 
@@ -16,6 +17,7 @@ const Blog = [
 
 const News = () => (
   <Layout>
+  <Seo title="Blog" description="" />
     <Section>
       <MainContainer>
         <div className="text-center py-6">
