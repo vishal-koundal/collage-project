@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
 
 import { Subtitle, MainContainer } from './elements';
-import Social from '../components/Social';
+import Social from './Social';
 
 const Container = styled.div`
   background: url(https://colorlib.com/preview/theme/coffee/img/footer-bg.jpg);
@@ -35,7 +34,7 @@ const Footer = () => (
         <form className="w-full max-w-sm mt-4">
           <div className="flex">
             <input
-              className="w-full p-3"
+              className="w-full p-3 text-black"
               type="text"
               placeholder="Enter Email"
               aria-label="Full name"

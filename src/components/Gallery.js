@@ -13,7 +13,7 @@ const Products = () => (
           Who are in extremely love with eco friendly system.
         </Subtitle>
       </div>
-      <div className="flex flex-wrap py-10">
+      <div className="flex flex-wrap justify-center py-10">
         <div className="flex-grow-0">
           <img
             className="p-2"
