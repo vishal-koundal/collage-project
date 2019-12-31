@@ -15,7 +15,7 @@ export default class IndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <Seo title="Home" description="Welcome to GatsbyJs v1" />
+        <Seo title="Home" description="Welcome to CafeCoffee" />
         <Container>
           <HomeHero />
           <HomeAbout />
